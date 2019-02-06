@@ -1,12 +1,26 @@
 <html>
-<body>
-<h1>New Menu Item</h1>
-<form action = "{{url_for("loginPage")}}" method="post" >
-<p>Name:</p>
-  <input type="text" name = "name" size=30>
-  <p>Password:</p>
-  <input type="password" name="pass" size=30>
-<button type="submit">create It!</button>
+<head>
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">
+</head>
+<body background="/static/index.jpeg">
+<h1>Login and Buy/Sell in Your Own Way</h1>
+<form action = "{{url_for("loginPage")}}" method="post" class="container">
+<h1>Name:</h1>
+  <input type="text" name = "name" placeholder="Username" size=30>
+  <h1>Password:</h1>
+  <input type="password" name="pass" placeholder="Password" size=30>
+  <br>
+  <label>
+<input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+  <br>
+<button type="submit">Login!</button>
+  <div class="container" style="background-color:#f1f1f1">
+    <span  class="cancelbtn"><a href="{{url_for("auction")}}">Cancel</a></span>
+    <span  class="cancelbtn">New?<a href="{{url_for("signUpPage")}}">Sign UP!</a></span>
+
+        <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
 </form>
 </body>
 </html>

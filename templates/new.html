@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css') }}">
+</head>
+<body>
+  <div class="topnav">
+  <a class="active" href="{{url_for("auction")}}">Home</a>
+  <a href="{{url_for('yourProducts')}}">Your Orders</a>
+  <a href="{{url_for('about')}}">About Us</a>
+  <a style="float:right"  href="{{url_for('logoutPage')}}">Logout</a>
+  <a style="float:right"  href="{{url_for('new', user_id=user_id)}}">New Item</a>
+
+
+
+
+<h1>New Product</h1>
+<form action = "{{url_for("new",user_id = user_id)}}" method="post" >
+  <form action = "{{url_for("loginPage")}}" method="post" >
+
+<p>Name of Product:</p>
+  <input type="text" name = "name" size=30>
+<p>Price in INR</p>
+<input type="number" name="price">
+<p>Description</p>
+<input type="text" name = "description" size=30>
+<br>
+<br>
+<label>File Input</label>
+<br>
+<input type="file" name="inputfile">
+  <br>
+  <br>
+<button type="submit">Sell It!</button>
+</form>
+</body>
+</html>

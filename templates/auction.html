@@ -1,0 +1,59 @@
+<html>
+<head>
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css') }}">
+</head>
+
+<body>
+  <div class="topnav">
+  <a class="active" href="{{url_for("auction")}}">Home</a>
+  <a href="{{url_for('profile',user_id=user_id)}}">Your Sellings</a>
+  <a href="{{url_for('yourProducts')}}">Your Orders</a>
+  <a href="{{url_for('about')}}">About Us</a>
+  <a style="float:right"  href="{{url_for('logoutPage')}}">Logout</a>
+
+
+</div>
+
+<h1>NOTE:  Given Date and Time are in UTC TimeZone</h1>
+
+  {%for i in items%}
+    {% if i.end_date < cur_date %}
+    {{ continue}}
+  {%else%}
+  <div class="ex1">
+  <center> <img src="/static/{{i.img}}" width="200" height="200" alt='Cat'></center><br>
+    <h1><p>{{i.name}}</p><h1>
+      <br>
+    <h2><u>Description</u></h2>
+    <p>{{i.description}}</p>
+    <br>
+    <h2><u>Current Highest Bid: RS {{i.price}}</u></h2>
+    {% if i.tag %}
+    <h1>BY: {{i.tag}}</h1>
+    {%else %}
+    <h1>NONE</h1>
+    {%endif%}
+    <br>
+    <h1>Your Bid</h1>
+    <form action="{{url_for("bidding",id=i.id)}}" method='post'>
+    {%if i.price < 1000 %}
+    <input type="number" name="newPrice" min="{{i.price}}" step="10">
+    {%elif i.price < 10000 %}
+    <input type="number" name="newPrice" min="{{i.price}}" step="100">
+    {%else%}
+    <input type="number" name="newPrice" min="{{i.price}}" step="1000">
+    {%endif%}
+
+    <button type="submit">BiD</button>
+    <h3><p><i>NOTE: Your BID Should Be Strictly Greater Than The Current Highest Bid.</i></p></h3>
+    </form>
+    <h1>Valid Till</h1>
+    <h2>{{i.end_date}}</h2>
+    <br>
+    </div>
+    <br>
+  {%endif%}
+  {% endfor %}
+
+</body>
+</html>

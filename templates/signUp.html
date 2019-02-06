@@ -1,12 +1,28 @@
 <html>
-<body>
-<h1>New Menu Item</h1>
-<form action = "{{url_for("signUpPage")}}" method="post" >
-<p>Name:</p>
-  <input type="text" name = "name" size=30>
-  <p>Password:</p>
-  <input type="password" name="pass" size=30>
-<button type="submit">create It!</button>
+<head>
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
+</head>
+
+<body background="/static/index.jpeg">
+
+<h1>Sign Up and Experience a Whole New World of Auctions and Biddings</h1>
+<form action = "{{url_for("signUpPage")}}" method="post"   style="border:1px solid #808080" >
+<div class="container">
+<h1>Name:</h1>
+  <input type="text" name = "name" placeholder="username" required size=30>
+  <h1>Password:</h1>
+  <input type="password" name="pass" placeholder="Password" required size=30>
+  <label>
+  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+</label>
+    <p>By creating an account you agree to our <a href="{{url_for('about')}}" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    <div class="clearfix">
+  <button type="button" class="cancelbtn" onclick="window.location.href = '{{url_for('auction')}}';">Cancel</button>
+  <button type="submit" class="signupbtn">Sign Up</button>
+  <p>Already have an account? <a href="{{url_for('loginPage')}}" style="color:dodgerblue">Login</a>.</p>
+
+</div>
+</div>
 </form>
 </body>
 </html>

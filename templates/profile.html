@@ -1,0 +1,39 @@
+<html>
+  <head>
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css') }}">
+  </head>
+
+  <body>
+    <div class="topnav">
+    <a class="active" href="{{url_for("auction")}}">Home</a>
+    <a href="{{url_for('yourProducts')}}">Your Orders</a>
+    <a href="{{url_for('about')}}">About Us</a>
+    <a style="float:right"  href="{{url_for('logoutPage')}}">Logout</a>
+    <a style="float:right"  href="{{url_for('new', user_id=user_id)}}">New Item</a>
+
+
+
+  </div>
+
+
+    {%for i in items%}
+    <div class="ex1">
+    <center> <img src="/static/{{i.img}}" width="200" height="200" alt='Cat'></center><br>
+      <h1><p>{{i.name}}</p><h1>
+        <br>
+      <h2><u>Description</u></h2>
+      <p>{{i.description}}</p>
+      <br>
+      <h2><u>Highest Bid: RS {{i.price}}</u></h2>
+
+      <br>
+      </div>
+      <br>
+    {% endfor %}
+
+  </body>
+  </html>
+
+
+</body>
+</html>
