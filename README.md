@@ -3,6 +3,10 @@
 ## Project Overview
 This is a Bidding Web app where you can freely sell your products or can bid on any of the available products of your choice.
 This is a free to all platform for bidding.
+In order to bid or post your product for auction you need to SignUp on this platform.
+Signing up requires only a username and a password.
+Password of the users are safe as they are hashed using an algorithm. So, even the creator or person handling the database can't find the exact password typed of the user.
+
 
 ## How to Run?
 ### PreRequisites
@@ -21,3 +25,6 @@ This is a free to all platform for bidding.
 
 ### Run the program
 `python main.py`
+
+###Final Step:
+ Open Your Browser and go to `localhost:5000/`
