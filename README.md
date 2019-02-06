@@ -21,7 +21,7 @@ Password of the users are safe as they are hashed using an algorithm. So, even t
 
 #### The database includes two tables:
 1. The **User** table includes the data of registered users.
-2. The **Item** table includes one data of items having a reference column of User table.
+2. The **Item** table includes  data of items having a reference column ofs User table.
 
 ### Run the program
 `python main.py`
