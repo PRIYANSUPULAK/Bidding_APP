@@ -5,7 +5,7 @@ This is a Bidding Web app where you can freely sell your products or can bid on 
 This is a free to all platform for bidding.
 In order to bid or post your product for auction you need to SignUp on this platform.
 Signing up requires only a username and a password.
-Password of the users are safe as they are hashed using an algorithm. So, even the creator or person handling the database can't find the exact password typed of the user.
+Password of the users are safe as they are hashed using an algorithm. So, even the creator or person handling the database can't find the exact password typed by the user.
 
 
 ## How to Run?
