@@ -1,0 +1,28 @@
+<html>
+  <head>
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css') }}">
+  </head>
+
+  <body>
+    <div class="topnav">
+    <a class="active" href="{{url_for("auction")}}">Home</a>
+    <a href="{{url_for('about')}}">About Us</a>
+  </div>
+
+  <h1>Few Rules which Everyone Has to follow while bidding.</h1>
+  <h3>1. You must me logged in before making any bid or posting a product for sell.</h3><br>
+  <h3>2. A product remains on the auction page for a maximum of 24 hours from the time of being posted.</h3><br>
+  <h3>3. UTC time(Not your local time) is displayed on the page.</h3><br>
+  <h3>4. User with the highest bidding at the endtime of a product will be declared as the winner.</h3><br>
+  <h3>5. Bidding will be done in the following way:</h3><nr>
+        <h4>For product price less than RS.1000::: Bidding will increase with the step of Rs.10</h4>
+        <h4>For product price less than RS.10000 and more then RS.1000::: Bidding will increase with the step of Rs.100</h4>
+        <h4>For product price greater than RS.10000::: Bidding will increase with the step of Rs.1000</h4>
+
+
+  </body>
+  </html>
+
+
+</body>
+</html>

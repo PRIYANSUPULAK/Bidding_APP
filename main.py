@@ -37,6 +37,9 @@ def new(user_id):
     else:
         return render_template('new.html',user_id=user_id)
 
+@app.route('/rules')
+def rules():
+    return render_template('rules.html')
 
 @app.route('/<int:user_id>/')
 def profile(user_id):
