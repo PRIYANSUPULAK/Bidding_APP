@@ -27,4 +27,4 @@ Password of the users are safe as they are hashed using an algorithm. So, even t
 `python main.py`
 
 ###Final Step:
- Open Your Browser and go to `localhost:5000/`
+#### Open Your Browser and go to `localhost:5000/`
