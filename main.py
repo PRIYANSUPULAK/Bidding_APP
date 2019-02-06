@@ -121,8 +121,9 @@ def bidding(id):
         print(type(newPrice))
         item=session.query(Item).filter_by(id=id).one()
         print(item.price)
+
         print(type(item.price))
-        if item.price < newPrice:
+        if item.price < newPrice and item.user_id != login_session['user_id']:
             print("here")
             item.price=newPrice
             item.tag=tag
