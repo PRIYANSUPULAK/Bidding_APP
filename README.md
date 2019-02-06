@@ -10,14 +10,14 @@ This is a free to all platform for bidding.
 2. [flask] `pip install flask==0.9` `pip install Flask-Login==0.1.3`
 3. [sqlalchemy] `apt-get -qqy install python-sqlalchemy`
 4. [httplib2]  `pip install httplib2`
-5. [SQLite3] (https://linuxhint.com/install-sqlite-ubuntu-linux-mint/)    
+5. [SQLite3](https://linuxhint.com/install-sqlite-ubuntu-linux-mint/)    
 
 ### Clone the Repository to your local computer using command:
 `git clone https://github.com/PRIYANSUPULAK/Bidding_APP.git`
 
 #### The database includes two tables:
-The **User** table includes the data of registered users.
-The **Item** table includes one data of items having a reference column of User table.
+1. The **User** table includes the data of registered users.
+2. The **Item** table includes one data of items having a reference column of User table.
 
 ### Run the program
-`python log.py`
+`python main.py`
